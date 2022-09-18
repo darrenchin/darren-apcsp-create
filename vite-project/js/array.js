@@ -61,4 +61,8 @@ const problems = [
   },
 ];
 
-problems.forEach((element) => console.log(element));
+// problems.forEach((question) => console.log(question));
+
+const questions = problems.map((question) => question);
+console.log(questions);
+function displayProblem() {}
