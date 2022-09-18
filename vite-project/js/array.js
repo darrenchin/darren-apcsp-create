@@ -1,42 +1,60 @@
 const problems = [
   {
-    problem: "2 + 2",
-    solution: "4",
+    problem:
+      "Sarah has 100 marbles. Dan has 50 marbles less than Sarah. How many marbles do they have altogether?",
+    solution: 150,
+    unit: "marbles",
   },
   {
-    problem: "10 x 2",
-    solution: "20",
+    problem:
+      "Diego baked 50 cakes. Sandra baked twice as many cakes as Diego. How many cakes did Sandra bake?",
+    solution: 100,
+    unit: "cakes",
   },
   {
-    problem: "1000-100",
-    solution: "900",
+    problem:
+      "Ryan bought his computer for $1200. Two years later, he sold his computer for $800. How much money did he lose?",
+    solution: 400,
+    unit: "dollars",
   },
   {
-    problem: "100 x 8",
-    solution: "800",
+    problem:
+      "Justin bought a $20000 car. However, he only had $13000 on him and had to request a loan from the bank. How much money did he request from the bank?",
+    solution: 7000,
+    unit: "dollars",
   },
   {
-    problem: "100-99",
-    solution: "1",
+    problem:
+      "Eric walked 5km to his school. He then walked 2km to the bakery and then 4km home. How many kilomters did Eric walk today?",
+    solution: 11,
+    unit: "kilometers",
   },
   {
-    problem: "20 + 5",
-    solution: "25",
+    problem:
+      "Henry drank 2 cups of water. Sandy drank 5 cups of water. How many cups of water did both of them drink?",
+    solution: 7,
+    unit: "cups",
   },
   {
-    problem: "2 x 8",
-    solution: "16",
+    problem:
+      "Olivia bought a hotdog and a soda, which costs $6 in total. The hotdog costs 2 times as much as the soda. How much does the hotdog cost?",
+    solution: 4,
+    unit: "dollars",
   },
   {
-    problem: "200/4",
-    solution: "50",
+    problem:
+      "Joanne bought 10 seal plushies for $50. She resold each of them for $10. How much did she profit from reselling the plushies?",
+    solution: 50,
+    unit: "dollars",
   },
   {
-    problem: "10 + 2",
-    solution: "12",
+    problem:
+      "Susmoy played Valorant(a video game) for 3 hours. Ethan was able to play 2 times as much as Susmoy today. How many hours did both of them play combined?",
+    solution: 9,
+    unit: "hours",
   },
   {
-    problem: "20 - 2",
+    problem: "",
     solution: "4",
   },
   {
