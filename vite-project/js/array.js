@@ -54,28 +54,40 @@ const problems = [
     unit: "hours",
   },
   {
-    problem: "",
-    solution: "4",
+    problem:
+      "Natalie ate 5 pieces of candy. Miki ate 3 pieces of candy. How much candy did both eat in total?",
+    solution: 8,
+    unit: "pieces",
   },
   {
-    problem: "74/2",
-    solution: "37",
+    problem:
+      "Matthew gave his dog 10 treats. Each treat costs 50 cents. How much money worth of treats did he give his dog?",
+    solution: 5,
+    unit: "dollars",
   },
   {
-    problem: "50 x 3",
-    solution: "150",
+    problem:
+      "Edmund bought a $500 phone. However, it cracked and he had to go to repair it. It costs half as much to repair the phone than to buy it. How much money did he spend on the phone in total?",
+    solution: 750,
+    unit: "dollars",
   },
   {
-    problem: "29 + 31",
-    solution: "60",
+    problem:
+      "Ryan bought $100 worth of in-game purchases. However, he had a gift card with a balance of $50 and used it on the purchase. How much money did he actually spend on the purchase?",
+    solution: 50,
+    unit: "dollars",
   },
   {
-    problem: "1000 - 91",
-    solution: "909",
+    problem:
+      "Jed had $46 in his wallet. Unfortunately, someone stole half of the money. How much money does Jed have left in the wallet?",
+    solution: 23,
+    unit: "dollars",
   },
   {
-    problem: "90 x 3",
-    solution: "270",
+    problem:
+      "Jack threw three basketballs in the hoop. However, only one made it in. Carmin also threw 3 basketballs in the hoop. However, all of them made it in. How many more hoops was Carmin able to score than Jack?",
+    solution: 2,
+    unit: "hoops",
   },
 ];
 
