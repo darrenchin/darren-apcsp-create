@@ -1,4 +1,4 @@
-const problems = [
+const items = [
   {
     problem:
       "Sarah has 100 marbles. Dan has 50 marbles less than Sarah. How many marbles do they have altogether?",
@@ -93,6 +93,17 @@ const problems = [
 
 // problems.forEach((question) => console.log(question));
 
-const questions = problems.map((question) => question);
+const questions = items.map((question) => question);
 console.log(questions);
-function displayProblem() {}
+function displayProblem(list) {
+  list.forEach((question) =>
+    document.querySelector("#display").insertAdjacentHTML(
+      "beforeend",
+      `<div class="problem-box">
+    <h1 class="problem-name">${items.problem}</h1>
+    <h2 class="problem-submit">${items.solution}</h2>
+    <h3 class="problem-unit">${items.unit}</h3>
+    </div>`
+    )
+  );
+}
