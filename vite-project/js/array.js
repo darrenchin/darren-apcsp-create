@@ -93,17 +93,20 @@ const items = [
 
 // problems.forEach((question) => console.log(question));
 
-const questions = items.map((question) => question);
-console.log(questions);
-function displayProblem(list) {
-  list.forEach((question) =>
-    document.querySelector("#display").insertAdjacentHTML(
+function displayProblem(items) {
+  items.forEach((item) =>
+    document.getElementById("display").insertAdjacentHTML(
       "beforeend",
       `<div class="problem-box">
-    <h1 class="problem-name">${items.problem}</h1>
-    <h2 class="problem-submit">${items.solution}</h2>
-    <h3 class="problem-unit">${items.unit}</h3>
+    <h1 class="problem-name">${item.problem}</h1>
+    <h2 class="problem-submit">${item.solution}</h2>
+    <h3 class="problem-unit">${item.unit}</h3>
     </div>`
     )
   );
 }
+
+window.addEventListener("load", function () {
+  displayProblem(items);
+  console.log("check");
+});
