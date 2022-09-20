@@ -110,3 +110,13 @@ window.addEventListener("load", function () {
   displayProblem(items);
   console.log("check");
 });
+
+const btn = document.getElementById("nextbtn");
+
+function nextProblem() {
+  //do the index stuff here
+}
+function clickNext() {
+  btn.addEventListener("click");
+  //call the nextProblem function here
+}
