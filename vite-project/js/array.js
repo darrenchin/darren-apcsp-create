@@ -93,23 +93,38 @@ const items = [
 
 // problems.forEach((question) => console.log(question));
 
-function displayProblem(items) {
-  items.forEach((item) =>
-    document.getElementById("display").insertAdjacentHTML(
-      "beforeend",
-      `<div class="problem-box">
-    <h1 class="problem-name">${item.problem}</h1>
-    <h2 class="problem-submit">${item.solution}</h2>
-    <h3 class="problem-unit">${item.unit}</h3>
-    </div>`
-    )
-  );
+var i = 0;
+function chooseProblem(p) {
+  let problem = "";
+  for (i; i < p.length; i++) {
+    problem += `<div class="problem-box">
+    <h1 class="problem-name">${p[i].problem}</h1>
+    <h2 class="problem-submit">${p[i].solution}</h2>
+    <h3 class="problem-unit">${p[i].unit}</h3>
+    </div>`;
+  }
+  return problem;
 }
+console.log(chooseProblem(items));
+document.querySelector("section").innerHTML += `${chooseProblem(items)}`;
 
-window.addEventListener("load", function () {
-  displayProblem(items);
-  console.log("check");
-});
+// function displayProblem(items) {
+//   items.forEach((item) =>
+//     document.getElementById("display").insertAdjacentHTML(
+//       "beforeend",
+//       `<div class="problem-box">
+//     <h1 class="problem-name">${item.problem}</h1>
+//     <h2 class="problem-submit">${item.solution}</h2>
+//     <h3 class="problem-unit">${item.unit}</h3>
+//     </div>`
+//     )
+//   );
+// }
+
+// window.addEventListener("load", function () {
+//   displayProblem(items);
+//   console.log("check");
+// });
 
 const btn = document.getElementById("nextbtn");
 
