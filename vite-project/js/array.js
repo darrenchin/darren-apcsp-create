@@ -93,16 +93,15 @@ const items = [
 
 // problems.forEach((question) => console.log(question));
 
-var i = 0;
+let i = 0;
 function chooseProblem(p) {
-  let problem = "";
-  for (i; i < p.length; i++) {
-    problem += `<div class="problem-box">
+  let problem = items[i];
+  problem += `<div class="problem-box">
     <h1 class="problem-name">${p[i].problem}</h1>
     <h2 class="problem-submit">${p[i].solution}</h2>
     <h3 class="problem-unit">${p[i].unit}</h3>
     </div>`;
-  }
+
   return problem;
 }
 console.log(chooseProblem(items));
@@ -129,9 +128,11 @@ document.querySelector("section").innerHTML += `${chooseProblem(items)}`;
 const btn = document.getElementById("nextbtn");
 
 function nextProblem() {
-  //do the index stuff here
+  btn.addEventListener("click", function () {
+    console.log("working");
+    while (i <= items.length) {
+      i++;
+    }
+  });
 }
-function clickNext() {
-  btn.addEventListener("click");
-  //call the nextProblem function here
-}
+nextProblem();
