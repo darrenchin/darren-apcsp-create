@@ -105,7 +105,7 @@ function chooseProblem(p) {
   return problem;
 }
 console.log(chooseProblem(items));
-document.querySelector("section").innerHTML += `${chooseProblem(items)}`;
+document.querySelector(".display").innerHTML += `${chooseProblem(items)}`;
 
 // function displayProblem(items) {
 //   items.forEach((item) =>
@@ -130,9 +130,10 @@ const btn = document.getElementById("nextbtn");
 function nextProblem() {
   btn.addEventListener("click", function () {
     console.log("working");
-    while (i <= items.length) {
-      i++;
-    }
+    console.log(i);
+    i++;
+    document.querySelector(".display").innerHTML = "";
+    document.querySelector(".display").innerHTML += `${chooseProblem(items)}`;
   });
 }
 nextProblem();
