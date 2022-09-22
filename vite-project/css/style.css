@@ -29,3 +29,22 @@ body,
 body {
   background-color: var(--light-green);
 }
+
+.problem-name {
+  font-size: 5rem;
+  font-family: "Sora", sans-serif;
+  color: var(--white);
+  text-align: center;
+}
+
+.problem-submit {
+  font-size: 3rem;
+}
+
+.problem-unit {
+  position: relative;
+  font-size: 5rem;
+  color: var(--white);
+  font-family: "Sora", sans-serif;
+  text-align: center;
+}
