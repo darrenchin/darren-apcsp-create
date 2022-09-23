@@ -98,7 +98,7 @@ function chooseProblem(p) {
   let problem = items[i];
   problem += `<div class="problem-box">
     <h1 class="problem-name">${p[i].problem}</h1>
-    <h2 class="problem-submit">${p[i].solution}</h2>
+    <input type = "text" class="problem-submit"></input>
     <h3 class="problem-unit">${p[i].unit}</h3>
     </div>`;
 
@@ -126,11 +126,19 @@ document.querySelector(".display").innerHTML += `${chooseProblem(items)}`;
 // });
 
 const btn = document.getElementById("nextbtn");
+let useranswer = document.querySelector(".problem-submit").value;
 
 function nextProblem() {
+  let problem = items[i];
   btn.addEventListener("click", function () {
+    console.log(useranswer);
     console.log("working");
     console.log(i);
+    if ((useranswer = problem.solution)) {
+      console.log("Your answer is correct");
+    } else {
+      console.log("Your answer is wrong");
+    }
     i++;
     document.querySelector(".display").innerHTML = "";
     document.querySelector(".display").innerHTML += `${chooseProblem(items)}`;
