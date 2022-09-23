@@ -28,6 +28,7 @@ body,
 }
 body {
   background-color: var(--light-green);
+  overflow-x: hidden;
 }
 
 .problem-name {
