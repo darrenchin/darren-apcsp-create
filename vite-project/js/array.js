@@ -126,11 +126,11 @@ document.querySelector(".display").innerHTML += `${chooseProblem(items)}`;
 // });
 
 const btn = document.getElementById("nextbtn");
-let useranswer = document.querySelector(".problem-submit").value;
 
 function nextProblem() {
   let problem = items[i];
   btn.addEventListener("click", function () {
+    let useranswer = document.querySelector(".problem-submit").value;
     console.log(useranswer);
     console.log("working");
     console.log(i);
