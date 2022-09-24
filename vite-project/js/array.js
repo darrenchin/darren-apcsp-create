@@ -99,7 +99,8 @@ function chooseProblem() {
   problem += `<div class="problem-box">
     <h1 class="problem-name">${problem.problem}</h1>
     <input type = "number" class="problem-submit"></input>
-    <h3 class="problem-unit">${problem.unit}</h3>
+    <h2 class="problem-unit">${problem.unit}</h2>
+    <h3 class="problem-feedback"></h3>
     </div>`;
 
   return problem;
@@ -126,6 +127,7 @@ document.querySelector(".display").innerHTML += `${chooseProblem()}`;
 // });
 
 const btn = document.getElementById("nextbtn");
+const feedback = document.querySelector(".problem-feedback");
 
 function nextProblem() {
   btn.addEventListener("click", function () {
@@ -137,12 +139,14 @@ function nextProblem() {
     console.log(problem.solution);
     if (useranswer === problem.solution) {
       console.log("Your answer is correct");
+      feedback.innerHTML = "Your answer is correct.";
     } else {
       console.log("Your answer is wrong");
+      feedback.innerHTML = `Your answer is incorrect. The correct answer is ${problem.solution} ${problem.unit}`;
     }
-    i++;
-    document.querySelector(".display").innerHTML = "";
-    document.querySelector(".display").innerHTML += `${chooseProblem()}`;
+    // i++;
+    // document.querySelector(".display").innerHTML = "";
+    // document.querySelector(".display").innerHTML += `${chooseProblem()}`;
     return problem;
   });
 }
