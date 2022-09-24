@@ -94,18 +94,18 @@ const items = [
 // problems.forEach((question) => console.log(question));
 
 let i = 0;
-function chooseProblem(p) {
+function chooseProblem() {
   let problem = items[i];
   problem += `<div class="problem-box">
-    <h1 class="problem-name">${p[i].problem}</h1>
-    <input type = "text" class="problem-submit"></input>
-    <h3 class="problem-unit">${p[i].unit}</h3>
+    <h1 class="problem-name">${problem.problem}</h1>
+    <input type = "number" class="problem-submit"></input>
+    <h3 class="problem-unit">${problem.unit}</h3>
     </div>`;
 
   return problem;
 }
-console.log(chooseProblem(items));
-document.querySelector(".display").innerHTML += `${chooseProblem(items)}`;
+console.log(chooseProblem());
+document.querySelector(".display").innerHTML += `${chooseProblem()}`;
 
 // function displayProblem(items) {
 //   items.forEach((item) =>
@@ -128,12 +128,13 @@ document.querySelector(".display").innerHTML += `${chooseProblem(items)}`;
 const btn = document.getElementById("nextbtn");
 
 function nextProblem() {
-  let problem = items[i];
   btn.addEventListener("click", function () {
+    let problem = items[i];
     let useranswer = document.querySelector(".problem-submit").value;
     console.log(useranswer);
     console.log("working");
     console.log(i);
+    console.log(problem.solution);
     if ((useranswer = problem.solution)) {
       console.log("Your answer is correct");
     } else {
@@ -141,7 +142,7 @@ function nextProblem() {
     }
     i++;
     document.querySelector(".display").innerHTML = "";
-    document.querySelector(".display").innerHTML += `${chooseProblem(items)}`;
+    document.querySelector(".display").innerHTML += `${chooseProblem()}`;
   });
 }
 nextProblem();
