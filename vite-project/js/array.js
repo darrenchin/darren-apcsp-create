@@ -130,7 +130,7 @@ const btn = document.getElementById("nextbtn");
 const feedback = document.querySelector(".problem-feedback");
 
 function nextProblem() {
-  btn.addEventListener("click", function () {
+  function checkAnswer() {
     let problem = items[i];
     let useranswer = document.querySelector(".problem-submit").value;
     console.log(useranswer);
@@ -144,10 +144,12 @@ function nextProblem() {
       console.log("Your answer is wrong");
       feedback.innerHTML = `Your answer is incorrect. The correct answer is ${problem.solution} ${problem.unit}`;
     }
+
     // i++;
     // document.querySelector(".display").innerHTML = "";
     // document.querySelector(".display").innerHTML += `${chooseProblem()}`;
     return problem;
-  });
+  }
+  btn.addEventListener("click", checkAnswer);
 }
 nextProblem();
