@@ -98,9 +98,11 @@ function chooseProblem() {
   let problem = items[i];
   problem += `<div class="problem-box">
     <h1 class="problem-name">${problem.problem}</h1>
-    <input type = "number" class="problem-submit"></input>
-    <h2 class="problem-unit">${problem.unit}</h2>
+    <div class = "answer-text">
+    <input type = "text" name = "integer" type = "integer" id = "integer" class="problem-submit"></input>
+    <label for = "integer" class="problem-unit">${problem.unit}</label>
     <h3 class="problem-feedback"></h3>
+    </div>
     </div>`;
 
   return problem;
@@ -127,15 +129,15 @@ document.querySelector(".display").innerHTML += `${chooseProblem()}`;
 // });
 
 const btn = document.getElementById("nextbtn");
-const feedback = document.querySelector(".problem-feedback");
 
 function checkAnswer() {
   let problem = items[i];
   let useranswer = document.querySelector(".problem-submit").value;
-  console.log(useranswer);
-  console.log("working");
-  console.log(i);
-  console.log(problem.solution);
+  const feedback = document.querySelector(".problem-feedback");
+  // console.log(useranswer);
+  // console.log("working");
+  // console.log(i);
+  // console.log(problem.solution);
   if (useranswer === problem.solution) {
     console.log("Your answer is correct");
     feedback.innerHTML = "Your answer is correct.";
@@ -146,17 +148,24 @@ function checkAnswer() {
 
   // return problem;
 }
-let count = 0;
-function nextQuestion() {
-  btn.onclick = function () {
-    count++;
-    console.log(count);
-  };
-  if (count === 1) {
-  }
-  // i++;
-  // document.querySelector(".display").innerHTML = "";
-  // document.querySelector(".display").innerHTML += `${chooseProblem()}`;
+function moveNext() {
+  i++;
+  document.querySelector(".display").innerHTML = "";
+  document.querySelector(".display").innerHTML += `${chooseProblem()}`;
 }
 
-btn.addEventListener("click", nextQuestion);
+function nextQuestion() {
+  let count = 0;
+  btn.onclick = function () {
+    if (count === 0) {
+      checkAnswer();
+      count++;
+    } else {
+      moveNext();
+      count = 0;
+    }
+    console.log(count);
+  };
+}
+
+nextQuestion();

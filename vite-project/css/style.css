@@ -32,20 +32,39 @@ body {
 }
 
 .problem-name {
-  font-size: 5rem;
+  font-size: 7rem;
   font-family: "Sora", sans-serif;
   color: var(--white);
   text-align: center;
 }
 
 .problem-submit {
-  font-size: 3rem;
+  /* font-size: 3rem;
+  border: none;
+  border-bottom: 1rem var(--white); */
+  display: inline;
+  background-color: transparent; 
+  color: var(--white);
+  outline: none;
+  outline-style: none;
+  border-top: none;
+  border-left: none;
+  border-right: none; 
+  border-bottom: solid var(--white) 0.1rem;
+  margin-right: 1rem;
+  font-family:"Sora", sans-serif; 
+  font-size: 5rem;
+  text-align: center;
 }
 
+.answer-text {
+  text-align: center;
+  margin-top: 15rem;
+}
 .problem-unit {
   position: relative;
   font-size: 5rem;
   color: var(--white);
   font-family: "Sora", sans-serif;
-  text-align: center;
+  margin-left: 1rem;
 }
