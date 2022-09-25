@@ -129,27 +129,28 @@ document.querySelector(".display").innerHTML += `${chooseProblem()}`;
 const btn = document.getElementById("nextbtn");
 const feedback = document.querySelector(".problem-feedback");
 
-function nextProblem() {
-  function checkAnswer() {
-    let problem = items[i];
-    let useranswer = document.querySelector(".problem-submit").value;
-    console.log(useranswer);
-    console.log("working");
-    console.log(i);
-    console.log(problem.solution);
-    if (useranswer === problem.solution) {
-      console.log("Your answer is correct");
-      feedback.innerHTML = "Your answer is correct.";
-    } else {
-      console.log("Your answer is wrong");
-      feedback.innerHTML = `Your answer is incorrect. The correct answer is ${problem.solution} ${problem.unit}`;
-    }
-
-    // i++;
-    // document.querySelector(".display").innerHTML = "";
-    // document.querySelector(".display").innerHTML += `${chooseProblem()}`;
-    return problem;
+function checkAnswer() {
+  let problem = items[i];
+  let useranswer = document.querySelector(".problem-submit").value;
+  console.log(useranswer);
+  console.log("working");
+  console.log(i);
+  console.log(problem.solution);
+  if (useranswer === problem.solution) {
+    console.log("Your answer is correct");
+    feedback.innerHTML = "Your answer is correct.";
+  } else {
+    console.log("Your answer is wrong");
+    feedback.innerHTML = `Your answer is incorrect. The correct answer is ${problem.solution} ${problem.unit}`;
   }
-  btn.addEventListener("click", checkAnswer);
+
+  // return problem;
 }
-nextProblem();
+
+function nextQuestion() {
+  i++;
+  document.querySelector(".display").innerHTML = "";
+  document.querySelector(".display").innerHTML += `${chooseProblem()}`;
+}
+
+btn.addEventListener("click", nextQuestion);
