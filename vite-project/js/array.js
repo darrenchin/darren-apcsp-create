@@ -146,11 +146,17 @@ function checkAnswer() {
 
   // return problem;
 }
-
+let count = 0;
 function nextQuestion() {
-  i++;
-  document.querySelector(".display").innerHTML = "";
-  document.querySelector(".display").innerHTML += `${chooseProblem()}`;
+  btn.onclick = function () {
+    count++;
+    console.log(count);
+  };
+  if (count === 1) {
+  }
+  // i++;
+  // document.querySelector(".display").innerHTML = "";
+  // document.querySelector(".display").innerHTML += `${chooseProblem()}`;
 }
 
 btn.addEventListener("click", nextQuestion);
