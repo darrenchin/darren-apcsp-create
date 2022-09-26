@@ -49,7 +49,7 @@ const items = [
   },
   {
     problem:
-      "Susmoy played Valorant(a video game) for 3 hours. Ethan was able to play 2 times as much as Susmoy today. How many hours did both of them play combined?",
+      "Susmoy played Valorant (a video game) for 3 hours. Ethan was able to play 2 times as much as Susmoy today. How many hours did both of them play combined?",
     solution: "9",
     unit: "hours",
   },
