@@ -22,9 +22,25 @@ body,
   font-family: "Sora", sans-serif;
   padding: 2rem;
 }
+
 .btn {
-  width: 10rem;
-  height: 8rem;
+  /* margin-top: 4rem;
+  margin-left: 50rem; */
+  display: block;
+  border: none;
+  margin: 0 auto;
+  margin-top: 7rem;
+  /* margin-top: 20rem;
+  margin-left: 165rem; */
+  border-radius: 1rem;
+  width: 10%;
+  height: 7rem;
+  font-size: 2.4rem;
+  background: var(--light-blue);
+  color: var(--white);
+  text-align: center;
+  font-family: "Sora", sans-serif;
+  font-weight: 700;
 }
 body {
   background-color: var(--light-green);
@@ -67,4 +83,19 @@ body {
   color: var(--white);
   font-family: "Sora", sans-serif;
   margin-left: 1rem;
+}
+.problem-feedback {
+  text-align: center;
+  font-family: "Sora", sans-serif;
+  font-size: 4rem;
+  padding-top: 5rem;
+  color: var(--white);
+}
+
+.score-feedback {
+  text-align: center;
+  font-family: "Sora", sans-serif;
+  font-size: 7rem;
+  color: var(--white);
+  margin-top: 15rem;
 }

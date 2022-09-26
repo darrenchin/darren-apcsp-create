@@ -94,21 +94,21 @@ const items = [
 // problems.forEach((question) => console.log(question));
 
 let i = 0;
+let score = 0;
 function chooseProblem() {
   let problem = items[i];
-  problem += `<div class="problem-box">
+  problem = `<div class="problem-box">
     <h1 class="problem-name">${problem.problem}</h1>
     <div class = "answer-text">
-    <input type = "text" name = "integer" type = "integer" id = "integer" class="problem-submit"></input>
+    <input type = "text " name = "integer" type = "integer" id = "integer" class="problem-submit"></input>
     <label for = "integer" class="problem-unit">${problem.unit}</label>
     <h3 class="problem-feedback"></h3>
     </div>
     </div>`;
-
   return problem;
 }
 console.log(chooseProblem());
-document.querySelector(".display").innerHTML += `${chooseProblem()}`;
+document.querySelector(".display").innerHTML = `${chooseProblem()}`;
 
 // function displayProblem(items) {
 //   items.forEach((item) =>
@@ -141,17 +141,26 @@ function checkAnswer() {
   if (useranswer === problem.solution) {
     console.log("Your answer is correct");
     feedback.innerHTML = "Your answer is correct.";
+    score++;
   } else {
     console.log("Your answer is wrong");
     feedback.innerHTML = `Your answer is incorrect. The correct answer is ${problem.solution} ${problem.unit}`;
   }
-
+  // console.log(score);
   // return problem;
 }
 function moveNext() {
   i++;
-  document.querySelector(".display").innerHTML = "";
-  document.querySelector(".display").innerHTML += `${chooseProblem()}`;
+  console.log(i);
+  if (i === 15) {
+    document.querySelector(".display").innerHTML = "";
+    document.querySelector(
+      ".display"
+    ).innerHTML = `<h1 class = "score-feedback">You answered ${score} out of 15 questions correctly.</h1>`;
+  } else {
+    document.querySelector(".display").innerHTML = "";
+    document.querySelector(".display").innerHTML = `${chooseProblem()}`;
+  }
 }
 
 function nextQuestion() {
@@ -160,11 +169,15 @@ function nextQuestion() {
     if (count === 0) {
       checkAnswer();
       count++;
+      btn.innerHTML = "";
+      btn.innerHTML = "Next";
     } else {
       moveNext();
       count = 0;
+      btn.innerHTML = "";
+      btn.innerHTML = "Submit";
     }
-    console.log(count);
+    // console.log(count);
   };
 }
 
