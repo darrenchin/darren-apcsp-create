@@ -157,6 +157,11 @@ function moveNext() {
     document.querySelector(
       ".display"
     ).innerHTML = `<h1 class = "score-feedback">You answered ${score} out of 15 questions correctly.</h1>`;
+    btn.innerHTML = "";
+    btn.innerHTML = "Restart";
+    btn.onclick = function () {
+      location.reload();
+    };
   } else {
     document.querySelector(".display").innerHTML = "";
     document.querySelector(".display").innerHTML = `${chooseProblem()}`;
