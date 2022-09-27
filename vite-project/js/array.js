@@ -55,7 +55,7 @@ const items = [
   },
   {
     problem:
-      "Natalie ate 5 pieces of candy. Miki ate 3 pieces of candy. How much candy did both eat in total?",
+      "Kelly ate 5 pieces of candy. Miki ate 3 pieces of candy. How much candy did both eat in total?",
     solution: "8",
     unit: "pieces",
   },
