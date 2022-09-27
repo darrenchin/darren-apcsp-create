@@ -177,10 +177,10 @@ function nextQuestion() {
       btn.innerHTML = "";
       btn.innerHTML = "Next";
     } else {
-      moveNext();
       count = 0;
       btn.innerHTML = "";
       btn.innerHTML = "Submit";
+      moveNext();
     }
     // console.log(count);
   };
