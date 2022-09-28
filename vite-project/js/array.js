@@ -25,7 +25,7 @@ const items = [
   },
   {
     problem:
-      "Eric walked 5km to his school. He then walked 2km to the bakery and then 4km home. How many kilomters did Eric walk today?",
+      "Eric walked 5km to his school. He then walked 2km to the bakery and then 4km home. How many kilometers did Eric walk today?",
     solution: "11",
     unit: "kilometers",
   },
