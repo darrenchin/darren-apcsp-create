@@ -105,7 +105,6 @@ function chooseProblem() {
     </div>`;
   return problem;
 }
-console.log(chooseProblem());
 document.querySelector(".display").innerHTML = `${chooseProblem()}`;
 
 const btn = document.getElementById("nextbtn");
