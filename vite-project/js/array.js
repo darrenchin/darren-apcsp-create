@@ -91,8 +91,6 @@ const items = [
   },
 ];
 
-// problems.forEach((question) => console.log(question));
-
 let i = 0;
 let score = 0;
 function chooseProblem() {
@@ -110,34 +108,12 @@ function chooseProblem() {
 console.log(chooseProblem());
 document.querySelector(".display").innerHTML = `${chooseProblem()}`;
 
-// function displayProblem(items) {
-//   items.forEach((item) =>
-//     document.getElementById("display").insertAdjacentHTML(
-//       "beforeend",
-//       `<div class="problem-box">
-//     <h1 class="problem-name">${item.problem}</h1>
-//     <h2 class="problem-submit">${item.solution}</h2>
-//     <h3 class="problem-unit">${item.unit}</h3>
-//     </div>`
-//     )
-//   );
-// }
-
-// window.addEventListener("load", function () {
-//   displayProblem(items);
-//   console.log("check");
-// });
-
 const btn = document.getElementById("nextbtn");
 
 function checkAnswer() {
   let problem = items[i];
   let useranswer = document.querySelector(".problem-submit").value;
   const feedback = document.querySelector(".problem-feedback");
-  // console.log(useranswer);
-  // console.log("working");
-  // console.log(i);
-  // console.log(problem.solution);
   if (useranswer === problem.solution) {
     console.log("Your answer is correct");
     feedback.innerHTML = "Your answer is correct.";
@@ -146,8 +122,6 @@ function checkAnswer() {
     console.log("Your answer is wrong");
     feedback.innerHTML = `Your answer is incorrect. The correct answer is ${problem.solution} ${problem.unit}`;
   }
-  // console.log(score);
-  // return problem;
 }
 function moveNext() {
   i++;
@@ -182,7 +156,6 @@ function nextQuestion() {
       btn.innerHTML = "Submit";
       moveNext();
     }
-    // console.log(count);
   };
 }
 
